@@ -54,3 +54,4 @@ COPY --from=backend /app/build /app/build
 EXPOSE 8080
 
 CMD ["pnpm", "run", "prod"]
+CMD docker run --name chatgpt-web -d -p 127.0.0.1:80:8080 --env OPENAI_API_KEY chatgpt-web
